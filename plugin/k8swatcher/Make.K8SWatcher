@@ -1,0 +1,11 @@
+.PHONY: run build clean
+
+build:
+	-mkdir bin
+	go build -o ./bin/k8swatcher github.com/mapleque/proxy/plugin/k8swatcher
+
+run:
+	go run plugin/k8swatcher/*.go
+
+clean:
+	-rm -rf build bin/k8swatcher

@@ -1,0 +1,13 @@
+.PHONY: run build clean
+
+build:
+	-mkdir bin
+	go build -o ./bin/jsonapi github.com/mapleque/proxy/plugin/jsonapi
+
+run:
+	go run plugin/jsonapi/*.go
+
+
+clean:
+	-rm -rf build bin/jsonapi
+
